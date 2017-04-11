@@ -23,9 +23,11 @@ RUN update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/jav
 RUN wget http://apache.mirrors.lucidnetworks.net/zeppelin/zeppelin-0.7.1/zeppelin-0.7.1-bin-all.tgz
 RUN tar xzvf zeppelin-0.7.1-bin-all.tgz
 WORKDIR /zeppelin-0.7.1-bin-all
-RUN mkdir -p notebook/2CE9R37R2
+RUN mkdir -p notebook/2CCMQVH7D
+RUN mkdir notebook/2CE9R37R2
 ADD zeppelin-env.sh conf/zeppelin-env.sh
 ADD zeppelin-site.xml.template conf/zeppelin-site.xml.template
+ADD ./notebooks/BatchKMeans.json notebook/2CCMQVH7D/note.json
 ADD ./notebooks/SparkClustering.json notebook/2CE9R37R2/note.json
 
 EXPOSE 8080 8081
