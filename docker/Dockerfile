@@ -20,9 +20,9 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 RUN update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 
 # zeppelin
-RUN wget http://apache.mirrors.lucidnetworks.net/zeppelin/zeppelin-0.7.1/zeppelin-0.7.1-bin-all.tgz
-RUN tar xzvf zeppelin-0.7.1-bin-all.tgz
-WORKDIR /zeppelin-0.7.1-bin-all
+RUN wget http://ftp.wayne.edu/apache/zeppelin/zeppelin-0.7.2/zeppelin-0.7.2-bin-all.tgz
+RUN tar xzvf zeppelin-0.7.2-bin-all.tgz
+WORKDIR /zeppelin-0.7.2-bin-all
 RUN mkdir -p notebook/2CE9R37R2
 ADD zeppelin-env.sh conf/zeppelin-env.sh
 ADD zeppelin-site.xml.template conf/zeppelin-site.xml.template
